@@ -1,0 +1,35 @@
+<section class="actorpage">
+
+	<div class="search">
+        <h1>Actor Directory</h1>
+		<p>Filter JSON feed multiple ways.</p>
+		<label>Search: </label>
+		<input ng-model="query.name" id="actorfilter" type="text" placeholder="Search for actors" autofocus onkeyup="checkEmpty()"> 
+		<label class="formgroup">Order by: 
+			<select ng-model="actorOrder">
+				<option value="name">Name</option>
+				<option value="birthplace">Birthplace</option>
+			</select>
+		</label>
+		<label class="formgroup">
+			<input type="radio" ng-model="direction" name="direction" checked>
+		Ascending
+		</label>
+		<label>
+			<input type="radio" ng-model="direction" name="direction" value="reverse">
+		Descending
+		</label>
+	</div>
+	<ul class="actorlist" id="actors" ng-show="query">
+		<li class="actor cf" ng-repeat="item in actors | filter: query | orderBy: actorOrder:direction"><!--Can also add | limitTo:3 to limit results if there are too many-->
+        <a href="#/details/{{actors.indexOf(item)}}">
+            <div class="info">
+			<img class="thumbnail cf" ng-src="images/{{item.shortname}}.jpg" alt = "Photo of {{item.name}}" width="120" height="180">
+            <h2>{{item.name}}</h2>
+            <p>{{item.birthplace}}</p>
+            </div>
+        </a>
+		</li>
+	</ul>
+
+</section>
