@@ -12,19 +12,19 @@
 	<link rel="stylesheet" href="css/style.css">
 	<script>
 		function checkEmpty(){
-				var txtBx = document.getElementById("actorfilter").value;
-				if(txtBx == "") {
-					document.getElementById("actors").style.display = "none";
-				}
-				else{
-					document.getElementById("actors").style.display = "block";
-				}
+			var txtBx = document.getElementById("actorfilter").value;
+			if(txtBx == "") {
+				document.getElementById("actors").style.display = "none";
+			}
+			else{
+				document.getElementById("actors").style.display = "block";
+			}
 		}
 	</script>
 </head>
 <body>
 
-
 <div class="main" ng-view></div>
+
 </body>
 </html>

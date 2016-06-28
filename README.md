@@ -2,6 +2,10 @@
 
 Angular Directory Search
 
+##About
+
+See [live demo here.](http://google.com)
+
 ## Installation
 
 Clone project and open index.html in Firefox.
