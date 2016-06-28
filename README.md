@@ -4,7 +4,7 @@ Angular Directory Search
 
 ##About
 
-See [live demo here.](http://google.com)
+See [live demo here.](http://everhome1.info/angularDir/)
 
 ## Installation
 
